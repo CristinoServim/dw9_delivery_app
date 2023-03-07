@@ -1,4 +1,4 @@
-import 'package:dw9_delivery_app/app/models/product_model.dart';
+import '../models/product_model.dart';
 
 class OrderProductDto {
   final ProductModel product;

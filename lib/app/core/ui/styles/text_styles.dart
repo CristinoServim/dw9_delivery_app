@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 class TextStyles {
   static TextStyles? _instance;
@@ -29,6 +29,9 @@ class TextStyles {
       TextStyle(fontWeight: FontWeight.w800, fontFamily: font);
 
   TextStyle get textButtonLabel => textBold.copyWith(fontSize: 14);
+
+  
+  TextStyle get textTitle => textextraBold.copyWith(fontSize: 28);
 }
 
 extension TextStylesExtensions on BuildContext {

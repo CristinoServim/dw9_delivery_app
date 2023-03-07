@@ -50,7 +50,7 @@ class _ProductDetailPageState
               ),
               TextButton(
                 onPressed: () {
-                  Navigator.of(context);
+                  Navigator.pop(context);
                   Navigator.of(context).pop(
                     OrderProductDto(
                       product: widget.product,
