@@ -30,9 +30,10 @@ class HomeController extends Cubit<HomeState> {
 
   void addOrUpdateBag(OrderProductDto orderProduct) {
     final shoppingBag = [...state.shoppingBag];
-    final orderIndex =
-        shoppingBag
-        .indexWhere((orderP) => orderP.product == orderP.product);
+    final orderIndex = shoppingBag
+        .indexWhere((orderP) => orderP.product.id == orderProduct.product.id);
+    // .indexWhere((orderP) => orderP.product == orderP.product);
+    // .indexWhere((orderP) => orderP.product == orderProduct.product);
 
     if (orderIndex > -1) {
       if (orderProduct.amount == 0) {
