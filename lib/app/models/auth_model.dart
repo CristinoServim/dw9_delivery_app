@@ -4,23 +4,23 @@ import 'dart:convert';
 
 class AuthModel {
   final String accessToken;
-  final String refresToken;
+  final String refreshToken;
   AuthModel({
     required this.accessToken,
-    required this.refresToken,
+    required this.refreshToken,
   });
 
   Map<String, dynamic> toMap() {
     return <String, dynamic>{
       'access_token': accessToken,
-      'refres_token': refresToken,
+      'refresh_token': refreshToken,
     };
   }
 
   factory AuthModel.fromMap(Map<String, dynamic> map) {
     return AuthModel(
       accessToken: map['access_token'] ?? '',
-      refresToken: map['refres_token'] ?? '',
+      refreshToken: map['refresh_token'] ?? '',
     );
   }
 

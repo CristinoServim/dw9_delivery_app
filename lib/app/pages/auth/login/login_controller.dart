@@ -21,7 +21,7 @@ class LoginController extends Cubit<LoginState> {
       final authModel = await _authRepository.login(email, password);
       final sp = await SharedPreferences.getInstance();
       sp.setString('accessToken', authModel.accessToken);
-      sp.setString('refreshTtoken', authModel.refresToken);
+      sp.setString('refreshToken', authModel.refreshToken);
       emit(state.copyWith(status: LoginStatus.success));
     } on Exception catch (e, s) {
       log('Erro ao realizar login.', error: e, stackTrace: s);
